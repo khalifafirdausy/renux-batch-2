@@ -15,54 +15,24 @@ class AlbumBlog extends React.Component{
                 <br></br>
                 <br></br>
                 <CardDeck>
-
-                <Col md="3">
-                    <Card>
-                        <CardImg top width="100%" src={gambarku} />
-                        <CardBody>
-                            <CardTitle><b>Ini foto pertama</b></CardTitle>
-                            <CardText>Ini isi</CardText>
-                            <Button color="info">Edit</Button>{' '}
-                            <Button color="danger">Hapus</Button>
-                        </CardBody>
-                    </Card>
-                </Col>
-
-                <Col md="3">
-                    <Card>
-                        <CardImg top width="100%" src={gambarku} />
-                        <CardBody>
-                            <CardTitle><b>Ini foto kedua</b></CardTitle>
-                            <CardText>Ini isi kedua</CardText>
-                            <Button color="info">Edit</Button>{' '}
-                            <Button color="danger">Hapus</Button>
-                        </CardBody>
-                    </Card>
-                </Col>
-
-                <Col md="3">
-                    <Card>
-                        <CardImg top width="100%" src={gambarku} />
-                        <CardBody>
-                            <CardTitle><b>Ini foto ketiga</b></CardTitle>
-                            <CardText>Ini isi</CardText>
-                            <Button color="info">Edit</Button>{' '}
-                            <Button color="danger">Hapus</Button>
-                        </CardBody>
-                    </Card>
-                </Col>
-
-                <Col md="3">
-                    <Card>
-                        <CardImg top width="100%" src={gambarku} />
-                        <CardBody>
-                            <CardTitle><b>Ini foto keempat</b></CardTitle>
-                            <CardText>Ini isi kedua</CardText>
-                            <Button color="info">Edit</Button>{' '}
-                            <Button color="danger">Hapus</Button>
-                        </CardBody>
-                    </Card>
-                </Col>
+                {
+                    this.props.album.map((data) => {
+                        return (
+                            <Col md="3">
+                                <Card>
+                                    <CardImg top width="100%" src={gambarku} />
+                                    <CardBody>
+                                        <CardTitle><b>{data.title}</b></CardTitle>
+                                        <CardText>{data.text}</CardText>
+                                        <Button color="info">Edit</Button>{' '}
+                                        <Button color="danger">Hapus</Button>
+                                    </CardBody>
+                                </Card>
+                            </Col>
+                        )
+                    })
+                }
+                
                 </CardDeck>
             </React.Fragment>
         )
