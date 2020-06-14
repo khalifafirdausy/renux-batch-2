@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import FormBlog from './formBlog';
 import AlbumBlog from './albumBlog';
 import FooterBlog from './footerBlog';
+import LearnState from "./learnState";
 
 import { Container } from 'reactstrap';
 
@@ -14,10 +15,10 @@ ReactDOM.render(
   <React.Fragment>
     <Container>
 
-      <FormBlog /> 
+      {/* <FormBlog /> 
       <AlbumBlog /> 
-      <FooterBlog />
-
+      <FooterBlog /> */}
+      <LearnState />
     </Container>
   </React.Fragment>,
 
